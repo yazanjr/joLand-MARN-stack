@@ -24,7 +24,6 @@ const Navbar = () => {
           <li><a href="#Header" className="hover:text-gray-300 transition">الرئيسية</a></li>
           <li><a href="#About" className="hover:text-gray-300 transition">رؤيتنا</a></li>
           <li><a href="#Projects" className="hover:text-gray-300 transition">فرص الاستثمار </a></li>
-          <li><a href="#Testimonials" className="hover:text-gray-300 transition">آراء العملاء</a></li>
           <li><a href="#Contact" className="hover:text-gray-300 transition">تواصل معنا </a></li>
 
         </ul>
@@ -50,16 +49,14 @@ const Navbar = () => {
         <div className='flex justify-end p-6 cursor-pointer  ' >
         <img onClick={() => setShowMobileMenu(false)} src={assets.CrossIcon} className='w-10'/>
         </div>
-        <ul className='flex flex-col items-center gap-2 mt-5 px-5 
+        <ul lang='ar' className='flex flex-col items-center gap-2 mt-5 px-5 
         text-lg font-medium '>
           <a  onClick={() => setShowMobileMenu(false)} href ="#Header" 
-          className='px-4 py2 rounded-full inline-block'>Home</a>
+          className='px-4 py2 rounded-full inline-block'>الرئيسية</a>
         <a onClick={() => setShowMobileMenu(false)} href ="#About" 
-          className='px-4 py2 rounded-full inline-block'>About</a>
+          className='px-4 py2 rounded-full inline-block'>رؤيتنا</a>
           <a onClick={() => setShowMobileMenu(false)} href ="#Projects" 
-          className='px-4 py2 rounded-full inline-block'>Projects</a>
-          <a onClick={() => setShowMobileMenu(false)} href ="#Testimonials" 
-          className='px-4 py2 rounded-full inline-block'>Testimonials</a>
+          className='px-4 py2 rounded-full inline-block'>فرص الاستثمار</a>
         </ul>
       </div>
     </div>

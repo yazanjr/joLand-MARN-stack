@@ -19,8 +19,7 @@ const Header = () => {
       viewport={{once: true}}
    className='container text-center mx-auto py-4 px-6 md:px-20 lg:px32 text-white'>
         <h2 className='text-5xl sm:text-6xl md:text-82[px] inline-block max-w-3xl font-semibold pt-20' lang='ar'>حدد ارضك و ارسم مستقبلك</h2>
-        <p className='mt-6 text-xl md:text-xl max-w-xl mx-auto' lang='ar'>
-         على مدى أكثر من عقدين، ساعدت جولاند المستثمرين والعائلات على امتلاك الأراضي في أكثر المواقع الواعدة في الأردن، مرافقةً لهم في كل خطوة من الرؤية إلى التملّك. </p>
+        
         <div className='space-x-6 mt-16'>
 
             <a href="#Projects" lang='ar' className='border border-white px-8 py-3 rounded ml-5'>فرص الاستثمار </a>

@@ -43,7 +43,7 @@ const Contact = () => {
 
       <form onSubmit={onSubmit} className="max-w-2xl mx-auto text-gray-600 pt-8">
         <div className="flex flex-wrap gap-4">
-          <div className="w-full md:w-[calc(50%-0.5rem)] text-left">
+          <div className="w-full md:w-[calc(100%-0.5rem)] text-left">
             <label className="block font-medium text-gray-700 mb-2">
               Your Name
             </label>
@@ -55,6 +55,21 @@ const Contact = () => {
               className="w-full border border-gray-300 rounded py-3 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
+          
+
+          <div className="w-full md:w-[calc(50%-0.5rem)] text-left">
+            <label className="block font-medium text-gray-700 mb-2">
+              Phone Number
+            </label>
+            <input
+              type="text"
+              name="Phone Number"
+              placeholder="Phone Number"
+              required
+              className="w-full border border-gray-300 rounded py-3 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+          
 
           <div className="w-full md:w-[calc(50%-0.5rem)] text-left">
             <label className="block font-medium text-gray-700 mb-2">
@@ -69,6 +84,8 @@ const Contact = () => {
             />
           </div>
         </div>
+
+        
 
         <div className="my-6 text-left">
           <label className="block font-medium text-gray-700 mb-2">Message</label>
