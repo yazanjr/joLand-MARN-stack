@@ -28,16 +28,18 @@ const Contact = () => {
       id="Contact"
       className="text-center p-6 py-20 lg:px-32 w-full overflow-hidden"
     >
-      <h1 className="text-2xl sm:text-4xl font-bold mb-2 text-center">
-        Contact{" "}
-        <span className="underline underline-offset-4 decoration-1 font-light">
-          With Us
+      <h1 lang="ar" className="text-2xl sm:text-4xl font-bold mb-2 text-center">
+       ! لا تفوّت الفرصة القادمة
+               <span className="underline underline-offset-4 decoration-1 font-light">
+          
         </span>
       </h1>
 
-      <p className="text-center text-gray-500 mb-12 max-w-80 mx-auto">
-        Ready to Make a Move? Let’s Build Your Future Together
-      </p>
+      <p lang="ar" className="text-center text-gray-500 mb-12 mx-auto">
+  الفرص الاستثمارية لا تنتظر طويلاً وأفضل الأراضي تُباع بسرعة.<br />
+  املأ بياناتك وسيتواصل معك أحد مستشارينا ليعرض عليك المشاريع الحالية والفرص القادمة التي تناسب أهدافك الاستثمارية.
+</p>
+
 
       <form onSubmit={onSubmit} className="max-w-2xl mx-auto text-gray-600 pt-8">
         <div className="flex flex-wrap gap-4">
@@ -80,9 +82,10 @@ const Contact = () => {
 
         <button
           type="submit"
+          lang="ar"
           className="bg-[#3b6d72] hover:bg-[#d5ae49] text-white py-2 px-12 mb-10 rounded transition-colors duration-300"
         >
-          Send Message
+          تواصل مع مستشار
         </button>
 
         {result && <p className="text-center text-gray-700">{result}</p>}

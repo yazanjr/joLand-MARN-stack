@@ -12,9 +12,9 @@ const Footer = () => {
         {/* Logo & Description */}
         <div className="w-full md:w-1/3 mb-8 md:mb-0">
           <img src={assets.logo} alt="Logo" className="w-32 md:w-40" />
-          <p className="text-gray-200 mt-4">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text.
+          <p lang="ar" className="text-gray-200 mt-4">
+           جولاند العقارية  نساعد المستثمرين والعائلات على امتلاك الأراضي بثقة ورؤية بعيدة المدى.
+خبرة موثوقة، مواقع استراتيجية، وقيمة مستدامة.
           </p>
         </div>
 

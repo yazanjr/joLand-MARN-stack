@@ -20,14 +20,16 @@ const Navbar = () => {
        <img src={assets.logo} className="w-16 sm:w-20 md:w-24 lg:w-30 -ml-4 md:-ml-8" />
 
         
-        <ul className="hidden md:flex gap-7 text-white font-medium">
-          <li><a href="#Header" className="hover:text-gray-300 transition">Home</a></li>
-          <li><a href="#About" className="hover:text-gray-300 transition">About</a></li>
-          <li><a href="#Projects" className="hover:text-gray-300 transition">Projects</a></li>
-          <li><a href="#Testimonials" className="hover:text-gray-300 transition">Testimonials</a></li>
+        <ul className="hidden md:flex gap-7 text-white font-medium ml-11" lang='ar'>
+          <li><a href="#Header" className="hover:text-gray-300 transition">الرئيسية</a></li>
+          <li><a href="#About" className="hover:text-gray-300 transition">رؤيتنا</a></li>
+          <li><a href="#Projects" className="hover:text-gray-300 transition">فرص الاستثمار </a></li>
+          <li><a href="#Testimonials" className="hover:text-gray-300 transition">آراء العملاء</a></li>
+          <li><a href="#Contact" className="hover:text-gray-300 transition">تواصل معنا </a></li>
+
         </ul>
 
-        <button className="hidden md:block bg-white text-[#3b6d72] px-8 py-2 rounded-full font-semibold hover:bg-gray-100 transition">
+        <button className="hidden md:block text-[#d5ae49] px-8 py-2 rounded-full font-semibold hover:bg-gray-100 transition">
           Jo Land
         </button>
 

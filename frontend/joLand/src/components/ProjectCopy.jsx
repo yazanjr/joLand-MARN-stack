@@ -1,6 +1,8 @@
+// src/components/ProjectCopy.jsx
 import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { fetchProjects } from "../api";
-import { assets } from "../assets/assets"; // make sure your arrows are imported here
+import { assets } from "../assets/assets";
 
 const ProjectCopy = () => {
   const [lands, setLands] = useState([]);
@@ -25,7 +27,7 @@ const ProjectCopy = () => {
   const scroll = (direction) => {
     const container = scrollRef.current;
     if (!container) return;
-    const scrollAmount = container.offsetWidth * 0.8; // how far to slide each time
+    const scrollAmount = container.offsetWidth * 0.8;
     container.scrollBy({
       left: direction === "left" ? -scrollAmount : scrollAmount,
       behavior: "smooth",
@@ -50,20 +52,20 @@ const ProjectCopy = () => {
     <section id="Projects" className="container mx-auto py-16 px-4 md:px-8">
       {/* Header */}
       <div className="text-center mb-8">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          Projects{" "}
+        <h2 lang="ar" className="text-3xl md:text-4xl font-bold mb-4">
+          اكتشف المشاريع المتاحة
           <span className="ml-2 font-light">
             <span className="underline underline-offset-4 decoration-1">
-              Available
+              
             </span>
           </span>
         </h2>
         <p lang="ar" className="text-gray-600 max-w-md mx-auto">
-          مش كل الكنز تحت الارض احياناً هو الارض نفسها
+          تعرّف على فرص استثمارية مختارة بعناية، تجمع بين النموّ المستقبلي ونمط الحياة والقيمة المستدامة.
         </p>
       </div>
 
-      {/* Slider Buttons */}
+      {/* Slider Controls */}
       <div className="flex justify-end items-center mb-6">
         <button
           onClick={() => scroll("left")}
@@ -93,30 +95,31 @@ const ProjectCopy = () => {
       >
         {lands.map((land) => (
           <article
-  key={land._id}
-  className="w-[380px] h-[500px] bg-[white] rounded-xl shadow-md overflow-hidden flex-shrink-0 transition-transform duration-300 hover:-translate-y-1"
->
-  <img
-    src={`${
-      import.meta.env.VITE_API_URL || "http://localhost:5555"
-    }${land.photo}`}
-    alt={land.location}
-    className="w-full h-64 object-cover"
-  />
-  <div className="p-6">
-    <h3 className="text-xl font-semibold text-gray-900 mb-2">
-      {land.location}
-    </h3>
-    <div className="text-sm text-gray-600 mb-3">
-      <span className="inline-block bg-[#3b6d72] bg-opacity-10 text-[#3b6d72] px-3 py-1 rounded-full">
-        {land.size} m²
-      </span>
-    </div>
-    <p className="text-gray-700 line-clamp-3 hover:line-clamp-none transition-all duration-300">
-      {land.description}
-    </p>
-  </div>
-</article>
+            key={land._id}
+            className="w-[380px] h-[500px] bg-white rounded-xl shadow-md overflow-hidden flex-shrink-0 transition-transform duration-300 hover:-translate-y-1"
+          >
+            <img
+  src={`${import.meta.env.VITE_API_URL}${land.photo}`}
+  alt={land.location}
+  className="w-full h-64 object-cover"
+  onError={(e) => (e.target.src = "https://via.placeholder.com/400x300?text=No+Image")}
+  loading="lazy"
+/>
+
+            <div className="p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                {land.location}
+              </h3>
+              <div className="text-sm text-gray-600 mb-3">
+                <span className="inline-block bg-[#3b6d72] bg-opacity-10 text-[#3b6d72] px-3 py-1 rounded-full">
+                  {land.size} m²
+                </span>
+              </div>
+              <p className="text-gray-700 line-clamp-3 hover:line-clamp-none transition-all duration-300">
+                {land.description}
+              </p>
+            </div>
+          </article>
         ))}
       </div>
 
@@ -126,6 +129,16 @@ const ProjectCopy = () => {
           No lands available at the moment.
         </div>
       )}
+
+      {/* View All Projects Button */}
+      <div className="text-center mt-12">
+        <Link
+          to="/projects"
+          className="inline-block bg-[#3b6d72] text-white px-8 py-3 rounded-lg font-medium hover:bg-[#335b61] transition"
+        >
+          View All Projects
+        </Link>
+      </div>
     </section>
   );
 };
